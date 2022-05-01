@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-body:#ff6600;
+  --color-leg:#ff3300;
+  --color-collar:#663399;
+  --color-nose:#660033;
+  --color-dog-semi-circle:#ffcc66;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(114, 188, 248);
+  display: grid;
+  place-items: center;
+}
