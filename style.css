@@ -29,4 +29,110 @@ body {
   width: 30vmin;
   height: 15vmin;
   background-color: var(--color-body);
+  border-radius: 0.7vmin 0 0;
+  position: relative;
+  align-self: center;
+  animation: up-and-doun 0.5s linear infinite;
+}
+
+.dog__left {
+  width: 2.5vmin;
+  height: 25vmin;
+  background-color: var(--color-body);
+  border-radius: 4vmin;
+  position: relative;
+}
+
+.dog__left::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10vmin;
+  transform: translateX(90%);
+  border-radius: inherit;
+  background-color: var(--color-leg);
+  z-index: -1;
+}
+
+.dog__semi-c {
+  position: absolute;
+  bottom: 0;
+  width: 8vmin;
+  height: 4vmin;
+  border-radius: 4vmin 4vmin 0 0;
+  background-color: var(--color-dog-semi-circle);
+}
+
+.right-leg {
+  position: absolute;
+  left: 26%;
+  bottom: 0;
+  width: 2vmin;
+  height: 5vmin;
+  transform: translateY(100%);
+  border-radius: 0 0 4vmin 4vmin;
+  background-color: var(--color-body);
+  box-shadow: 2vmin 0 0 0 var(--color-leg);
+  animation: scaling-leg 0.5s linear infinite;
+}
+
+@keyframes scaling-leg {
+  0%, 100% {
+    height: 5vmin;
+  }
+  50% {
+    height: 7vmin;
+  }
+}
+
+.ear {
+  position: absolute;
+  background-color: var(--color-body);
+  box-shadow: 3vmin 0 0 0 var(--color-leg);
+  left: 53.5%;
+  top: 0;
+  width: 4vmin;
+  height: 5vmin;
+  transform: translateY(-100%);
+  border-radius: 4vmin 4vmin 0 0;
+}
+
+.dog__collar {
+  position: absolute;
+  left: 40%;
+  width: 4vmin;
+  height: 100%;
+  background-color: var(--color-collar);
+}
+
+.dog__collar::after,
+.dog__collar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 2.8vmin;
+  height: 1.5vmin;
+  border-radius: 4vmin 4vmin 0 0;
+  background-color: var(--color-body);
+}
+
+.dog__collar::after {
+  top: calc(100% + 1.5vmin);
+  border-radius: 0 0 4vmin 4vmin;
+}
+
+.dog__collar__circle {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  background-color: var(--color-body);
+  transform: translateX(-50%);
+  box-shadow: 0 2rem 0 0 var(--color-body);
 }
