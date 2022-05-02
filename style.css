@@ -134,5 +134,5 @@ body {
   border-radius: 50%;
   background-color: var(--color-body);
   transform: translateX(-50%);
-  box-shadow: 0 2rem 0 0 var(--color-body);
+  box-shadow: 0 4rem 0 0 var(--color-body);
 }
