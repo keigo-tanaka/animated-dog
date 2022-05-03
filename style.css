@@ -136,3 +136,67 @@ body {
   transform: translateX(-50%);
   box-shadow: 0 4rem 0 0 var(--color-body);
 }
+
+.eye {
+  position: absolute;
+  right: 28%;
+  top: 25%;
+  width: 2vmin;
+  height: 2vmin;
+  background-color: var(--color-nose);
+  border-radius: 50%;
+  box-shadow: 2.5vmin 0 0 var(--color-nose);
+}
+
+.mouth {
+  position: absolute;
+  right: 13%;
+  top: 55%;
+  width: 8vmin;
+  height: 5.5vmin;
+  border-radius: 0 0 4vmin 4vmin;
+  background-image: linear-gradient(to top, var(--color-nose) 70%, #fff 0%);
+}
+
+.mouth::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  width: 4vmin;
+  height: 5vmin;
+  transform: translate(-50%, 80%);
+  border-radius: 2vmin 2vmin 4vmin 4vmin;
+  background-color: #cc0033;
+}
+
+.nose {
+  position: relative;
+  width: 5vmin;
+  height: 10vmin;
+  background-color: var(--color-body);
+  margin-top: 10vmin;
+  margin-left: -1vmin;
+  animation: up-and-down 0.5s linear infinite;
+}
+
+.nose::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  transform: translateX(50%);
+  background-color: var(--color-nose);
+  width: 10vmin;
+  height: 10vmin;
+  transform: translateX(50%);
+  border-radius: 50%;
+}
+
+@keyframes up-and-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2vmin);
+  }
+}
